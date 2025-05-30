@@ -1,0 +1,201 @@
+/* Global resets and fonts */
+main {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Container styling */
+.login-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Wider container for blog content */
+    box-sizing: border-box;
+}
+
+/* Header text */
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+}
+
+.login-subtitle {
+    font-size: 1rem;
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #2d3748;
+}
+
+.form-control {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.4);
+}
+
+/* File input specific styling */
+input[type="file"].form-control {
+    padding: 0.5rem;
+    background-color: #f7fafc;
+    cursor: pointer;
+}
+
+input[type="file"].form-control::-webkit-file-upload-button {
+    background: #3182ce;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+input[type="file"].form-control::-webkit-file-upload-button:hover {
+    background: #2b6cb0;
+}
+
+/* Textarea specific styling */
+textarea.form-control {
+    min-height: 200px;
+    resize: vertical;
+    line-height: 1.6;
+    font-family: inherit;
+}
+
+.form-text {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-top: 0.25rem;
+}
+
+/* Button styling */
+.login-button {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-weight: 500;
+}
+
+.login-button:hover {
+    background-color: #2b6cb0;
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* Form actions */
+.form-actions {
+    margin-top: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .login-container {
+        margin: 0;
+        padding: 1.5rem;
+        border-radius: 1;
+    }
+
+    .login-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .login-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .form-control {
+        padding: 0.875rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    textarea.form-control {
+        min-height: 150px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    main {
+        padding: 1rem 0;
+    }
+
+    .login-container {
+        padding: 1.25rem;
+    }
+
+    .login-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .login-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .login-button {
+        padding: 0.75rem;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .login-button:hover {
+        transform: none;
+    }
+    
+    .login-button:active {
+        background-color: #2c5282;
+        transform: translateY(1px);
+    }
+} 

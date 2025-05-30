@@ -1,0 +1,74 @@
+body {
+    background: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  height: 100vh;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.card {
+    box-shadow: 0 6px 20px rgba(0,0, 0, 0.12), 0 2px 6px rgba(0,0, 0, 0.1);
+    border-radius: 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #e1e8ed;
+    margin-bottom: 32px;
+    background: #fff;
+}
+
+.card:hover {
+    /* transform: translateY(-8px) scale(1.03); */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.09);
+}
+
+.card-img-top {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #e1e8ed;
+    box-shadow: 0 4px 8px rgba(0,0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 0.75rem;
+}
+
+.btn-primary {
+    background: #4e54c8;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #3a3f9e;
+}
+
+.row-cols-4 > .col {
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobile responsive adjustments for home.ejs (adjust grid (row-cols-4) so that (on small screens) the grid becomes a row of 2 blogs (i.e. 2 blogs in one row) (while preserving the structure of the ejs file)) */
+@media (max-width: 767px) {
+  .row-cols-4 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row-cols-4 > .col {
+    width: 50%; /* (so that (on small screens) the grid becomes a row of 2 blogs (i.e. 2 blogs in one row)) */
+  }
+  .card {
+    width: 100% !important; /* (fluid card (override inline style)) */
+  }
+  .card-img-top {
+    height: 200px; /* (or adjust as needed) */
+  }
+} 

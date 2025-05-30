@@ -1,0 +1,98 @@
+/* Blog container (Twitter-like feed container) */
+.blog-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-left: 1px solid #e1e8ed;
+    border-right: 1px solid #e1e8ed;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.1);
+}
+
+/* Blog header (sticky header) */
+.blog-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #e1e8ed;
+    padding: 12px 16px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Blog content (padding for feed-like spacing) */
+.blog-content {
+    padding: 16px;
+}
+
+/* Blog cover image (Twitter-like card image) */
+.blog-cover img {
+    border-radius: 18px;
+    border: 2px solid #e1e8ed;
+    box-shadow: 0 4px 8px rgba(0,0, 0, 0.2);
+    width: 100%;
+    height: auto;
+}
+
+/* Blog body (Twitter-like card body) */
+.blog-body {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #14171a;
+    margin: 16px 0;
+}
+
+/* Blog author (Twitter-like author) */
+.blog-author {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.blog-author img {
+    border-radius: 50%;
+    border: 1px solid #e1e8ed;
+    box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+    margin-right: 8px;
+}
+
+.blog-author span {
+    font-weight: 600;
+    color: #14171a;
+}
+
+/* Blog comment (Twitter-like comment) */
+.blog-comment {
+    border: 1px solid #e1e8ed;
+    border-radius: 18px;
+    box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+/* Blog comment form (Twitter-like comment form) */
+.blog-comment-form {
+    border: 1px solid #e1e8ed;
+    border-radius: 18px;
+    box-shadow: 0 2px 4px rgba(0,0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+/* Override container margin (if needed) */
+.container {
+    margin-top: 0;
+}
+
+/* Mobile responsive adjustments for blog.ejs (adjust blog container (and blog cover image) so that (on small screens) the blog container (and blog cover image) are fluid (e.g. width: 100% and a fluid image) on small screens) */
+@media (max-width: 767px) {
+  .blog-container {
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+  .blog-cover img {
+    width: 100%;
+    height: auto;
+  }
+} 
